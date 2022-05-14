@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.safeme.activiy.main.MainViewModel" />
+            type="com.example.safeme.activiy.qr_scan.QRScanViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,4 +1,4 @@
-package com.example.safeme.activiy.main
+package com.example.safeme.activiy.missing_list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,17 +6,16 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.safeme.R
 import com.example.safeme.base.BaseActivity
-import com.example.safeme.base.BaseViewModel
-import com.example.safeme.databinding.ActivityMainBinding
+import com.example.safeme.databinding.ActivityMissingListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity() {
-    private val binding: ActivityMainBinding by lazy {
-        DataBindingUtil.setContentView(this, R.layout.activity_main)
+class MissingListActivity : BaseActivity() {
+    private val binding: ActivityMissingListBinding by lazy {
+        DataBindingUtil.setContentView(this, R.layout.activity_missing_list)
     }
 
-    override val viewModel: MainViewModel by viewModels()
+    override val viewModel: MissingListViewModel by viewModels()
 
     override fun initDataBinding() {
         binding.viewModel = viewModel
@@ -24,6 +23,6 @@ class MainActivity : BaseActivity() {
     }
 
     override fun observeViewModel() {
-        TODO("Not yet implemented")
+
     }
 }

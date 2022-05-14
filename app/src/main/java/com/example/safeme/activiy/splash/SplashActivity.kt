@@ -1,12 +1,10 @@
 package com.example.safeme.activiy.splash
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.animation.AnimationUtils
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.safeme.R
-import com.example.safeme.activiy.main.MainActivity
 import com.example.safeme.activiy.select_role.SelectRoleActivity
 import com.example.safeme.base.BaseActivity
 import com.example.safeme.databinding.ActivitySplashBinding
@@ -30,10 +28,7 @@ class SplashActivity: BaseActivity() {
     override fun observeViewModel() {
         viewModel.navigateToSelectRoleEvent.observe(this) {
             binding.loadingImage.setImageDrawable(resources.getDrawable(R.drawable.load_end))
-        }
-
-        viewModel.navigateToMainEvent.observe(this) {
-            navigateToMain()
+            navigateToSelectRole()
         }
     }
 
@@ -45,10 +40,6 @@ class SplashActivity: BaseActivity() {
     private fun navigateToSelectRole() {
         val selectRoleIntent = Intent(this, SelectRoleActivity::class.java)
         startActivity(selectRoleIntent)
-    }
-
-    private fun navigateToMain() {
-        val mainIntent = Intent(this, MainActivity::class.java)
-        startActivity(mainIntent)
+        finish()
     }
 }

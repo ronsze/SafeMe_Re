@@ -11,15 +11,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".activiy.qr_scan.QRScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.missing_map.MissingMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.missing_info.MissingInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.each_info.EachInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.alarm_set.AlarmSetActivity"
+            android:exported="false" />
+        <activity
             android:name=".activiy.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activiy.main.MainActivity"/>
-        <activity android:name=".activiy.select_role.SelectRoleActivity"/>
+        <activity
+            android:name=".activiy.map.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.missing_regist.MissingRegistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.missing_list.MissingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activiy.setting.SettingActivity"
+            android:exported="false" />
+        <activity android:name=".activiy.select_role.SelectRoleActivity" />
+        <activity android:name=".activiy.guard.GuardActivity" />
+        <activity android:name=".activiy.ward.WardActivity" />
     </application>
 
 </manifest>
